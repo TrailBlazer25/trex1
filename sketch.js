@@ -66,7 +66,6 @@ function setup() {
   obstaclesGroup = new Group();
   
   score = 0;
-  trex.setCollider(0,0,30);
 }
 
 function draw() {
