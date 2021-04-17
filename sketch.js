@@ -12,6 +12,8 @@ var score=0;
 
 var gameOver, restart;
 
+var r;
+
 localStorage["HighestScore"] = 0;
 
 function preload(){
@@ -144,7 +146,8 @@ function spawnClouds() {
 }
 
 function spawnObstacles() {
-  if(frameCount % 60 === 0) {
+  r = Math.round(random(60,120));
+  if(frameCount % r === 0) {
     var obstacle = createSprite(600,165,10,40);
     //obstacle.debug = true;
     obstacle.velocityX = -(6 + 3*score/100);
